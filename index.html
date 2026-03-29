@@ -85,7 +85,7 @@
         .section-title {
             font-size: 2rem;
             margin-bottom: 40px;
-            text-align: left; /* Professional Left-Align */
+            text-align: left;
             color: var(--text-main);
             font-weight: 700;
         }
@@ -100,22 +100,23 @@
             border-radius: 2px;
         }
 
-        /* Hero Section */
+        /* Hero Section - Centered Layout without Image */
         #home {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            min-height: 85vh;
-            gap: 60px;
+            justify-content: center;
+            text-align: center;
+            min-height: 70vh;
             border-bottom: 1px solid var(--border-color);
         }
 
         .hero-text {
-            flex: 1.2;
+            max-width: 800px;
         }
 
         .hero-text h1 {
-            font-size: 4rem;
+            font-size: 4.5rem;
             line-height: 1.1;
             margin-bottom: 20px;
             color: var(--text-main);
@@ -128,20 +129,21 @@
             margin-bottom: 15px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
         .hero-text p {
             color: var(--text-muted);
             margin-bottom: 35px;
-            font-size: 1.15rem;
-            max-width: 550px;
+            font-size: 1.25rem;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .btn {
             display: inline-block;
             padding: 14px 32px;
-            background: var(--text-main); /* Classy Black Button */
+            background: var(--text-main);
             color: white;
             text-decoration: none;
             border-radius: 6px;
@@ -153,20 +155,6 @@
             background: var(--primary-color);
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
-        }
-
-        .hero-image {
-            flex: 0.8;
-            display: flex;
-            justify-content: center;
-        }
-
-        .hero-image img {
-            width: 100%;
-            max-width: 380px;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            border: 1px solid var(--border-color);
         }
 
         /* Cards & Timeline */
@@ -237,7 +225,11 @@
             border-top: 1px solid var(--border-color);
         }
 
-        .contact-item { color: var(--text-main); font-weight: 500; }
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-item { color: var(--text-main); font-weight: 500; margin: 10px 0; }
 
         .social-links a {
             color: var(--text-main);
@@ -260,8 +252,7 @@
         }
 
         @media (max-width: 768px) {
-            #home { flex-direction: column-reverse; text-align: center; padding-top: 120px; }
-            .hero-text h1 { font-size: 2.8rem; }
+            .hero-text h1 { font-size: 3rem; }
             .section-title { text-align: center; }
             .section-title::after { margin: 10px auto; }
         }
